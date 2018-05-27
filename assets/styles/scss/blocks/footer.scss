@@ -1,0 +1,58 @@
+.footer {
+	padding: 45px 30px;
+	display: flex;
+	justify-content: space-between;
+
+	&__left,
+	&__right {
+		width: 315px;
+	}
+
+	&__nav {
+		display: inline-block;
+		margin-top: 30px;
+
+		&-link {
+			color: $lightGray;
+			font-family: 'Open Sans Light';
+			font-size: .8888rem;
+
+			&:hover {
+				color: $white;
+			}
+
+			&--selected {
+				border-bottom: 1px solid $lightGray;
+			}
+		}
+	}
+
+	&__social {
+		text-align: center;
+
+		&-link {
+			margin: 0 10px;
+		}
+	}
+
+	&__copyright {
+		margin-top: 140px;
+		font-family: 'Open Sans Light';
+
+		&:before {
+			color: $green;
+			content: "© ";
+		}
+
+		&-years {
+			font-family: 'Open Sans Regular';
+		}
+	}
+
+	&__right {
+		&-text {
+			color: $lightGray;
+			margin-bottom: 20px;
+		}
+	}
+}

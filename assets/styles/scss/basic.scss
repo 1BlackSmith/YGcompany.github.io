@@ -1,0 +1,45 @@
+.clearfix:after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+/* Контейнер */
+.container {
+	margin: auto;
+	padding: 0 15px;
+	width: 1200px;
+}
+
+/* Блоки */
+.section {
+	position: relative;
+	display: inline-block;
+	padding: 60px 100px;
+	width: 100%;
+	background-color: $gray;
+	box-shadow: 0 0 40px rgba(0,0,0,.35);
+	
+	&:before {
+		position: absolute;
+		top: 60px;
+		right: 0;
+		transform: translateX(70%) rotate(90deg);
+  	transform-origin: left top;
+		color: $green;
+		font-family: 'Oswald Light';
+		font-size: 2rem;
+		letter-spacing: .1em;
+		opacity: .5;
+		content: "since 2014";
+	}
+
+	&__wrap {
+		padding-bottom: 95px;
+	}
+}
+
+/* Списки */
+.unlist {
+	list-style: none;
+}
