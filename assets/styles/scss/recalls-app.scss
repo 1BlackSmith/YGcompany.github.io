@@ -1,0 +1,57 @@
+@import 'variables.scss';
+@import 'foundation.scss';
+@import 'basic.scss';
+
+/* Шапка */
+@import 'blocks/header.scss';
+
+.recalls {
+	background-image: url(../../img/recalls-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	
+	&__title {
+		margin-bottom: 60px;
+		border-right: 2px solid $green;
+		padding-right: 80px;
+		width: calc(50% - 1px);
+	}
+
+	&__list {
+		display: flex; 
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		position: relative;
+		margin-bottom: 60px;
+		padding: 85px 50px 20px 50px;
+		width: 30%;
+		background-color: $darkGray;
+
+		&-photo {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	
+		&-title {
+			position: relative;
+			padding-bottom: 20px;
+
+			&:after {
+
+			}
+		}
+
+		&-date {
+			font-size: 0.6666rem;
+		}
+	}
+}
+
+/* Подвал */
+@import 'blocks/footer.scss'; 
