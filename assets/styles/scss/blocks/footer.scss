@@ -8,9 +8,25 @@
 		width: 315px;
 	}
 
+	&__same-blocks {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 45px;
+	}
+
+	&__brand-wrap {
+		justify-content: flex-start;
+	}
+
 	&__nav {
 		display: inline-block;
 		margin-top: 30px;
+
+		&-item,
+		&-link {
+			line-height: 26px;
+		}
 
 		&-link {
 			color: $lightGray;
@@ -24,6 +40,7 @@
 	}
 
 	&__social {
+		padding-top: 8px;
 		text-align: center;
 
 		&-link {
@@ -32,7 +49,7 @@
 	}
 
 	&__copyright {
-		margin-top: 140px;
+		margin-top: 160px;
 		font-family: 'Open Sans Light';
 
 		&:before {
