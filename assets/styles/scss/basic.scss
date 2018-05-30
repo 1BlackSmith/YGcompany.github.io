@@ -43,3 +43,29 @@
 .unlist {
 	list-style: none;
 }
+
+
+/* Эффекты */
+@keyframes drag {
+	0% {
+		transform: translateX(0);
+	}
+	33% {
+		transform: translateX(-20%);
+	}
+	66% {
+		transform: translateX(20%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+// Покачивание при наведении
+.drag:hover {
+	animation-name: drag;
+	animation-duration: .5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+}
+
