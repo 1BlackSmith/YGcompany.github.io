@@ -54,8 +54,9 @@
 		font-family: 'Open Sans Light';
 
 		&:before {
+			margin-right: 10px;
 			color: $green;
-			content: "© ";
+			content: "\00A9";
 		}
 
 		&-years {
