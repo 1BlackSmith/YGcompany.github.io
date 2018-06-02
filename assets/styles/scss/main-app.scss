@@ -1,0 +1,63 @@
+@import 'variables.scss';
+@import 'foundation.scss';
+@import 'basic.scss';
+
+/* Шапка */
+@import 'blocks/header.scss';
+.header {
+	background-color: transparent;
+}
+
+
+.main-display {
+	background-image: url(../../img/main-dispay-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&__meeting {
+		padding: 165px 0;
+	}
+
+	&__title {
+		position: relative;
+		margin: 0 auto;
+		margin-bottom: 40px;
+		padding-bottom: 45px;
+		width: 650px;
+		color: $white;
+		font-size: 2.6666rem;
+		line-height: 1.5em;
+		letter-spacing: .05em;
+		text-transform: uppercase;
+		text-align: center;
+
+		&:after {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 255px;
+			height: 3px;
+			background-color: $green;
+			content: "";
+		}
+	}
+
+	&__text {
+		margin: 0 auto;
+		margin-bottom: 40px;
+		width: 645px;
+		text-align: center;
+	}
+
+	&__btn {
+		display: block;
+		margin: 0 auto;
+		width: 200px;
+	}
+}
+
+
+/* Подвал */
+@import 'blocks/footer.scss'; 
