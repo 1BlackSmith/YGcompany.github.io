@@ -3,6 +3,12 @@
 	margin: auto;
 	padding: 0 15px;
 	width: 1200px;
+
+	&:after {
+		clear: both;
+		display: table;
+		content: "";
+	}
 }
 
 
@@ -10,10 +16,11 @@
 .section {
 	position: relative;
 	display: inline-block;
-	padding: 60px 100px;
+	padding: 60px 0;
 	width: 100%;
 
 	&--whith-shadow {
+		padding: 60px 100px;
 		background-color: $gray;
 		box-shadow: 0 0 40px rgba(0,0,0,.35);
 
@@ -35,12 +42,38 @@
 	&__wrap {
 		padding-bottom: 95px;
 	}
+
+	&__title {
+		margin-bottom: 55px;
+
+		&-head {
+			color: $green;
+		}
+
+		&-subhead {
+			margin: 0 auto;
+			width: 300px;
+			color: $lightGray;
+			font-size: 1.1111rem;
+			text-align: center;
+		}
+	}
 }
 
 
 /* Списки */
 .unlist {
 	list-style: none;
+}
+
+/* Контейнер изображений */
+.img-container {
+	display: inline-block;
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
 }
 
 

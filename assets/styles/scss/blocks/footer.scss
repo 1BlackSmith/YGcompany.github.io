@@ -3,6 +3,10 @@
 	display: flex;
 	justify-content: space-between;
 
+	&__wrap {
+		background-color: $superDarkGray;
+	}
+
 	&__left,
 	&__right {
 		width: 315px;

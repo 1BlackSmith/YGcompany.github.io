@@ -1,6 +1,8 @@
 @import 'variables.scss';
 @import 'foundation.scss';
+body { background-color: $darkGray; }
 @import 'basic.scss';
+
 
 /* Шапка */
 @import 'blocks/header.scss';
@@ -9,6 +11,7 @@
 }
 
 
+/* Главный экран */
 .main-display {
 	background-image: url(../../img/main-dispay-bg.jpg);
 	background-repeat: no-repeat;
@@ -56,6 +59,54 @@
 		margin: 0 auto;
 		width: 200px;
 	}
+}
+
+
+/* Раздел "О нас" */
+.about {
+
+	&__left,
+	&__right {
+		float: left;
+	}
+
+	&__left {
+		width: 41%;
+	}
+
+	&__text-block {
+		margin-bottom: 60px;
+	}
+
+	&__head {
+		margin-bottom: 25px;
+		font-family: 'Oswald Regular';
+		font-size: 2rem;
+		letter-spacing: .03em;
+		line-height: 1em;
+	}
+
+
+	&__right {
+		position: relative;
+		width: 59%;
+	}
+
+	&__play-video {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+
+/* Раздел "Услуги" */
+.services {
+	background-image: url(../../img/main-services-bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 
