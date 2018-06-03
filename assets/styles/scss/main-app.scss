@@ -53,12 +53,6 @@ body { background-color: $darkGray; }
 		width: 645px;
 		text-align: center;
 	}
-
-	&__btn {
-		display: block;
-		margin: 0 auto;
-		width: 200px;
-	}
 }
 
 
@@ -103,10 +97,112 @@ body { background-color: $darkGray; }
 
 /* Раздел "Услуги" */
 .services {
+	padding: 100px 0;
 	background-image: url(../../img/main-services-bg.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	
+	&__slider {
+		margin-right: 50px;
+		margin-bottom: 90px !important;
+		margin-left: 50px;
+		padding: 30px 0;
+
+		&_slide {
+			position: relative;
+			padding: 0 30px;
+			height: 200px;
+			transition: transform .5s .1s ease;
+
+			&-img {
+				position: relative;
+				z-index: 1;
+				padding: 0 30px;
+				height: 100%;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+
+				&:before {
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					z-index: -1;
+					background-color: rgba(0,0,0,.7);
+					content: "";
+					opacity: 0;
+					transition: opacity .5s .1s;
+				}
+			}
+
+			&-inner {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+			}
+
+			&-head,
+			&-text {
+				text-align: center;
+			}
+
+			&-head {
+				margin-bottom: 20px;
+				font-family: 'Oswald Regular';
+				font-size: 1.1111rem;
+				letter-spacing: .05em;
+				opacity: 0;
+				transition: opacity .5s .5s;
+			}
+
+			&-divider {
+				margin: 0 auto;
+				margin-bottom: 15px;
+				width: 0;
+				height: 2px;
+				background-color: $green;
+				transition: width .5s 1s ease;
+			}
+
+			&-text {
+				color: $lightGray;
+				font-size: .8888rem;
+				opacity: 0;
+				transition: opacity .5s .5s;
+			}
+		}
+
+		.slick-list {
+			padding: 30px;
+		}
+
+		.slick-current {
+			transform: scale(1.15);
+
+			.services__slider_slide-inner {
+				transform: scale(.85);
+			} 
+
+			.services__slider_slide-img {
+				box-shadow: 0 0 15px rgba(0,0,0,.55);
+			}
+
+			.services__slider_slide-img:before,
+			.services__slider_slide-head,
+			.services__slider_slide-text {
+				opacity: 1;
+			}
+
+			.services__slider_slide-divider {
+				width: 50%;
+			}
+		}
+	}
 }
 
 
