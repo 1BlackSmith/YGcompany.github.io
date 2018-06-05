@@ -66,7 +66,7 @@
 					<h2 class="section__title-head">Наши услуги</h2>
 					<p class="section__title-subhead">Выполняем быстро и качественно</p>
 				</div>
-				<div class="services__slider" id="slider">
+				<div class="services__slider" id="services-slider">
 					<div class="services__slider_slide">
 						<div class="services__slider_slide-img" style="background-image: url(assets/img/services-slider/2.jpg);">
 							<div class="services__slider_slide-inner">
@@ -125,6 +125,66 @@
 				<div class="btn-container"><a class="btn" href="/services">Подробнее</a></div>
 			</div>
 		</section>
+		<section class="stages section">
+			<div class="container">
+				<div class="section__title">
+					<h2 class="section__title-head">Этапы реализации проектов</h2>
+					<p class="section__title-subhead">Поставим для Вас оборудование SIEMENS</p>
+				</div>
+				<div class="stages__slider" id="stages-slider">
+					<div class="stages__slider_slide">
+						<div class="stages__slider_slide-stage">1</div>
+						<div class="stages__slider_slide-dot"></div>
+						<div class="stages__slider_slide-text">Обследование объекта</div>
+					</div>
+					<div class="stages__slider_slide stages__slider_slide--inv">
+						<div class="stages__slider_slide-stage">2</div>
+						<div class="stages__slider_slide-dot"></div>
+						<div class="stages__slider_slide-text">Изучение технологии</div>
+					</div>
+					<div class="stages__slider_slide">
+						<div class="stages__slider_slide-stage">3</div>
+						<div class="stages__slider_slide-dot"></div>
+						<div class="stages__slider_slide-text">Предворительное проектирование</div>
+					</div>
+					<div class="stages__slider_slide stages__slider_slide--inv">
+						<div class="stages__slider_slide-stage">4</div>
+						<div class="stages__slider_slide-dot"></div>
+						<div class="stages__slider_slide-text">Согласование с заказчиком</div>
+					</div>
+					<div class="stages__slider_slide">
+						<div class="stages__slider_slide-stage">5</div>
+						<div class="stages__slider_slide-dot"></div>
+						<div class="stages__slider_slide-text">Поставка оборудования</div>
+					</div>
+					<div class="stages__slider_slide">
+						<div class="stages__slider_slide-stage">6</div>
+						<div class="stages__slider_slide-dot"></div>
+						<div class="stages__slider_slide-text">Обследование объекта</div>
+					</div>
+					<div class="stages__slider_slide stages__slider_slide--inv">
+						<div class="stages__slider_slide-stage">7</div>
+						<div class="stages__slider_slide-dot"></div>
+						<div class="stages__slider_slide-text">Изучение технологии</div>
+					</div>
+					<div class="stages__slider_slide">
+						<div class="stages__slider_slide-stage">8</div>
+						<div class="stages__slider_slide-dot"></div>
+						<div class="stages__slider_slide-text">Предворительное проектирование</div>
+					</div>
+					<div class="stages__slider_slide stages__slider_slide--inv">
+						<div class="stages__slider_slide-stage">9</div>
+						<div class="stages__slider_slide-dot"></div>
+						<div class="stages__slider_slide-text">Согласование с заказчиком</div>
+					</div>
+					<div class="stages__slider_slide">
+						<div class="stages__slider_slide-stage">10</div>
+						<div class="stages__slider_slide-dot"></div>
+						<div class="stages__slider_slide-text">Поставка оборудования</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<div class="footer__wrap">
 			<div class="container">
 				<div class="footer">
@@ -164,12 +224,20 @@
 		<script type="text/javascript" src="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
 
 		<script>
-			$('#slider').slick({
+			$('#services-slider').slick({
 				arrows: false,
 				centerMode: true, 
 				centerPadding: '60', 
 				dots: true,
 				slidesToShow: 3
+			});
+
+			$('#stages-slider').slick({
+				arrows: true,
+				dots: false,
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				infinite: false
 			});
 		</script>
 	</body>
