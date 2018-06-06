@@ -253,9 +253,9 @@ body { background-color: $darkGray; }
 	
 	&__slider {
 		position: relative;
-		margin-right: 50px;
-		margin-bottom: 80px !important;
-		margin-left: 50px;
+		margin-right: 25px;
+		margin-bottom: 0 !important;
+		margin-left: 25px;
 
 		&:before {
 			position: absolute;
@@ -273,7 +273,7 @@ body { background-color: $darkGray; }
 			flex-direction: column;
 			align-items: center;
 			justify-content: space-between;
-			padding: 0 30px;
+			padding: 0 40px;
 			height: 140px;
 
 			&--inv {
@@ -334,6 +334,129 @@ body { background-color: $darkGray; }
 
 		&:not(.slick-disabled):hover:before {
 			opacity: .6;
+		}
+	}
+
+
+	&__divider {
+		margin: 70px 0;
+		height: 1px;
+		background: repeating-linear-gradient(90deg, $white, $white 40px, transparent 40px, transparent 80px);
+	}
+
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -15px;
+
+		&_item {
+			padding: 0 30px;
+			width: 25%;
+
+			&-img {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 20px;
+			}
+
+			&-head,
+			&-text {
+				text-align: center;
+			}
+
+			&-head {
+				margin-bottom: 20px;
+				font-family: 'Oswald Regular';
+				font-size: 1.2222rem;
+				letter-spacing: .05em;
+				text-transform: uppercase;
+			}
+
+			&-text {
+				color: $lightGray;
+				font-family: 'Open Sans Light';
+				font-size: .8888rem;
+			}
+		}
+	}
+}
+
+
+/* Раздел "Наши проекты" */
+.projects {
+	padding: 120px 0;
+	background-image: url(../../img/main-projects-bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		margin-right: 70px;
+		margin-bottom: 70px;
+		margin-left: 70px;
+
+		&_item {
+			display: inline-block;
+			padding: 0 10px;
+			width: 33.3333%;
+			cursor: pointer;
+
+			&-head {
+				font-family: 'Oswald Regular';
+				font-size: 2rem;
+				line-height: 1em;
+				letter-spacing: .05em;
+				text-align: center;
+			}
+
+			&-info {
+				position: relative;
+				margin-bottom: 30px;
+				//height: 370px;
+
+				img {
+					float: left;
+				}
+			}
+
+			&-inner {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 0 40px;
+				background-color: rgba(0,0,0,.85);
+				text-align: center;
+				opacity: 0;
+				transition: all .4s ease; 
+
+				&:before {
+					margin: 0 auto;
+					margin-bottom: 20px;
+					width: 0;
+					height: 2px;
+					background-color: $green;
+					content: "";
+					transition: all .3s .4s ease;
+				}
+			}
+
+			&:hover &-inner {
+				opacity: 1;
+
+				&:before {
+					width: 40%;
+				}
+			}
 		}
 	}
 }
