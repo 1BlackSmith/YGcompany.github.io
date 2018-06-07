@@ -462,5 +462,49 @@ body { background-color: $darkGray; }
 }
 
 
+/* Раздел "Наши партнеры" */
+.partners {
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+
+		&_item {
+			position: relative;
+
+			&-logo {
+				transition: all .2s .1s ease-in;
+
+				&--hover {
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					transition: all .3s ease-in;
+				}
+			}
+
+			&-link:hover &-logo {
+				//opacity: 0;
+
+				&--hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+
+/* Раздел "Отзывы" */
+.recalls {
+	background-image: url(../../img/main-recalls-bg.jpg);
+
+	&__list {
+		padding: 60px 0;
+	}
+}
+
+
 /* Подвал */
 @import 'blocks/footer.scss'; 
