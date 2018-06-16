@@ -1,0 +1,55 @@
+// Этот класс присвается дескриптору body при открытии модального окна
+.fixed {
+	overflow: hidden;
+}
+
+.modal {
+	position: relative;
+	padding: 200px 0;
+	height: 100%;
+
+	&-wrap {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 99;
+		background-color: rgba(0,0,0,.5);
+		opacity: 0;
+		visibility: hidden;
+		transition: all .3s;
+
+		&.open {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		right: -50px;
+		top: 100px;
+		border: 0;
+		background: none;
+		cursor: pointer;
+
+		&-icon {
+			width: 1rem;
+			height: 1rem;
+		}
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+
+	&__full-img {
+		display: inline-block;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
