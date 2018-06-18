@@ -5,8 +5,9 @@
 
 .modal {
 	position: relative;
-	padding: 200px 0;
+	padding: 200px 15px;
 	height: 100%;
+	overflow-y: auto;
 
 	&-wrap {
 		position: fixed;
@@ -51,5 +52,25 @@
 		display: inline-block;
 		max-width: 100%;
 		max-height: 100%;
+	}
+
+	&__case {
+		position: relative;
+		margin: -110px 0;
+		padding: 60px 75px;
+		background-color: rgba(24,24,24,.95);
+
+		&-block {
+			margin-bottom: 60px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.modal__close {
+			top: 70px;
+			right: 75px;
+		}
 	}
 }
