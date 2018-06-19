@@ -3,6 +3,7 @@
 body { background-color: $darkGray; }
 @import 'basic.scss';
 
+@import 'modal.scss';
 
 /* Шапка */
 @import 'blocks/header.scss';
